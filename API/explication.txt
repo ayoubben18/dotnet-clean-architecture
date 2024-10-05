@@ -1,0 +1,41 @@
+This will act as the receriver of the http request and the sender of the response.
+
+and it will act as the controller layer which control the start and end behavior of our application.
+
+we are gonna use mediator 
+
+on request comes : Mediator.Send make a query or send a command
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+Mediator handler : handle our use case that lives in our application layer
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+Object Out : return the object to the api layer
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+                        |
+Api Controller : send the object to the client with an http response 
+                        
+
+
+
