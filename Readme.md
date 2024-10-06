@@ -65,3 +65,19 @@ This will simplify the query logic and improve the read performance of our appli
 
 - Make the controllers as thin as possible.
 - Use dependency injection to inject the services into the controllers.
+
+### Packages :
+
+Fluent validation : Is a package used to validate our data, so we know when to throw a 400 bad request.
+--- With manual validator we need to injeect the validator into the controller and invoke the validator.
+--- With automatic validation, fluent validator plugs into the validation pipeline and allow models to be validated before a controller action is invoked.
+Mediator : Is a package used to send the commands and queries to the domain layer.
+
+### Error handling
+
+Our rule is to keep the controllers as thin as possible.
+so we have our own external error handling logic inside of a ResultObject. so we can deel with the error handling logic inside of the handlers.
+Why we have our own ResultObject ?
+
+- We can't use error responses in the Command/Qeury handlers because they do not inherit from the ApiController.
+- We can return exception but it is not a good practice because it is not a good way to handle errors. and exception are heavy to use.
