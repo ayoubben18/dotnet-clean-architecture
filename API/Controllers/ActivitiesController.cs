@@ -6,15 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 
-
 {
-
     public class ActivitiesController : BaseApiController
     {
         [HttpGet]
-        public async Task<ActionResult<List<Activity>>> GetActivities()
+        public async Task<ActionResult<List<Activity>>> GetActivities(CancellationToken token)
         {
-            return await Mediator.Send(new List.Query());
+            return await Mediator.Send(new List.Query(), token);
         }
 
         [HttpGet("{id}")]
