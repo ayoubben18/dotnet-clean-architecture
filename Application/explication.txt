@@ -1,0 +1,5 @@
+This application layer is a class lib that we weill use as the use cases layer in our clean architecture.
+
+return the object to the api layer.
+
+Mediator is a go between (solve the problem of cross cutting concern) the api layer and the domain layer.
